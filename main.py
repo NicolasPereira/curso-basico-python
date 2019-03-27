@@ -1,23 +1,20 @@
 #-*- coding: utf-8 -*-
-#Meu Décimo oitavo Programa
-#Trabalhando com  MySQL and Python
+#Meu Décimo sétimo Programa
+#Trabalhando com  modularização
+import media as m
+import aleatorio as a
 
-import MySQLdb
+lista = a.geraListaInteiro(10)
 
-host = "localhost"
-user = "root"
-password = "root"
-db = "meubanco"
-port = 3306
+media = m.media(lista)
+mediana = m.mediana(lista)
+moda = m.moda(lista)
 
-con = MySQLdb.connect(host,user,password,db,port)
-
-
-mycursor = con.cursor()
-
-mycursor.execute("select nome_alunos from alunos")
-
-myresult = mycursor.fetchall()
-
-for x in myresult:
-    print("Nome do aluno: "+ str(x))
+print("Minha Lista:\n")
+print (lista)
+print()
+print ("A média da minha lista é: " + str(media))
+print()
+print ("A mediana da minha lista é: " + str(mediana))
+print()
+print ("A moda da minha lista é: " + str(moda))
