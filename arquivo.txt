@@ -1,0 +1,3 @@
+eu estou manipulando um texto
+Python é legal
+Eu estou estudando Python
